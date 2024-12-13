@@ -1,15 +1,22 @@
 import { useRoutes } from "react-router";
 
+// pages
+import Home from "@/pages/home";
+
 export default function App() {
   const element = useRoutes([
     {
       path: "/",
-      element: <div>Home</div>,
+      element: <Home />,
+    },
+    {
+      path: "/learn",
+      element: <div className="m-auto grid">Learn</div>,
     },
   ]);
 
   return (
-    <main className="m-auto grid h-screen bg-[url('https://i.pinimg.com/736x/d5/4a/1e/d54a1e5fd3b883bb410ae11a64f46c08.jpg')]">
+    <main className="m-auto grid h-screen bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd98YXF0irQENhSBfItW4RYoPSdyxMMX7YXQ&s')]">
       <section className="m-auto h-[90%] w-4/5 rounded bg-white/30 backdrop-blur">
         {element}
       </section>
