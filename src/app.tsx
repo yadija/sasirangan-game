@@ -2,6 +2,7 @@ import { useRoutes } from "react-router";
 
 // pages
 import Home from "@/pages/home";
+import Learn from "@/pages/learn";
 
 export default function App() {
   const element = useRoutes([
@@ -11,7 +12,7 @@ export default function App() {
     },
     {
       path: "/learn",
-      element: <div className="m-auto grid">Learn</div>,
+      element: <Learn />,
     },
   ]);
 
