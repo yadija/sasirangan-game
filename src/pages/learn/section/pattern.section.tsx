@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -24,6 +23,21 @@ import nagaBalimbur from "../../../assets/images/pattern/naga-balimbur.png";
 import ombakSinapur from "../../../assets/images/pattern/ombak-sinapur-karang.png";
 import turunDayang from "../../../assets/images/pattern/turun-dayang.png";
 
+const patternImages = [
+  { src: bayamRaja, alt: "bayam raja" },
+  { src: bintangBahambur, alt: "bintang bahambur" },
+  { src: gagatas, alt: "gagatas" },
+  { src: gigiHaruan, alt: "gigi haruan" },
+  { src: irisPundak, alt: "iris pundak" },
+  { src: kambangSasaki, alt: "kambang sasaki" },
+  { src: kembangKacang, alt: "kembang kacang" },
+  { src: kembangTampuk, alt: "kembang tampuk manggis" },
+  { src: kulatKurikit, alt: "kulat kurikit" },
+  { src: nagaBalimbur, alt: "naga balimbur" },
+  { src: ombakSinapur, alt: "ombak sinapur" },
+  { src: turunDayang, alt: "turun dayang" },
+];
+
 export default function PatternSection() {
   return (
     <Dialog>
@@ -33,55 +47,18 @@ export default function PatternSection() {
       <DialogContent className="h-screen max-w-[800px] sm:h-[65vh]">
         <DialogHeader>
           <DialogTitle>Motif Sasirangan</DialogTitle>
-          <DialogDescription hidden />
         </DialogHeader>
 
         <ScrollArea className="h-full pr-2">
           <section className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-            <img src={bayamRaja} alt="bayam raja" className="h-auto w-full" />
-            <img
-              src={bintangBahambur}
-              alt="bintang bahambur"
-              className="h-auto w-full"
-            />
-            <img src={gagatas} alt="gagatas" className="h-auto w-full" />
-            <img src={gigiHaruan} alt="gigi haruan" className="h-auto w-full" />
-            <img src={irisPundak} alt="iris pundak" className="h-auto w-full" />
-            <img
-              src={kambangSasaki}
-              alt="kambang sasaki"
-              className="h-auto w-full"
-            />
-            <img
-              src={kembangKacang}
-              alt="kembang kacang"
-              className="h-auto w-full"
-            />
-            <img
-              src={kembangTampuk}
-              alt="kembang tampuk manggis"
-              className="h-auto w-full"
-            />
-            <img
-              src={kulatKurikit}
-              alt="kulat kurikit"
-              className="h-auto w-full"
-            />
-            <img
-              src={nagaBalimbur}
-              alt="naga balimbur"
-              className="h-auto w-full"
-            />
-            <img
-              src={ombakSinapur}
-              alt="ombak sinapur"
-              className="h-auto w-full"
-            />
-            <img
-              src={turunDayang}
-              alt="turun dayang"
-              className="h-auto w-full"
-            />
+            {patternImages.map((image, index) => (
+              <img
+                key={index}
+                src={image.src}
+                alt={image.alt}
+                className="h-auto w-full rounded border border-gray-200"
+              />
+            ))}
           </section>
         </ScrollArea>
 
