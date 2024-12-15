@@ -2,6 +2,7 @@ import { Link } from "react-router";
 
 // components
 import { Button } from "@/components/ui/button";
+import StartButton from "@/pages/home/section/start.button";
 
 export default function Home() {
   return (
@@ -10,9 +11,7 @@ export default function Home() {
         <h1 className="mb-5 text-7xl font-bold">Sasirangan Game</h1>
 
         <section className="space-x-2 text-center">
-          <Button>
-            <Link to="/quiz">Mulai Quiz</Link>
-          </Button>
+          <StartButton />
           <Button variant="outline">
             <Link to="/learn">Belajar Dulu</Link>
           </Button>
