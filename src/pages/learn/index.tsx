@@ -2,6 +2,7 @@
 import HistorySection from "@/pages/learn/section/history.section";
 import IntroduceSection from "@/pages/learn/section/introduce.section";
 import MakingSection from "@/pages/learn/section/making.section";
+import PatternSection from "@/pages/learn/section/pattern.section";
 
 export default function Learn() {
   return (
@@ -14,6 +15,7 @@ export default function Learn() {
         <IntroduceSection />
         <HistorySection />
         <MakingSection />
+        <PatternSection />
       </section>
     </section>
   );
