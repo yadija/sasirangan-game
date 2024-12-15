@@ -10,7 +10,9 @@ export default function Home() {
         <h1 className="mb-5 text-7xl font-bold">Sasirangan Game</h1>
 
         <section className="space-x-2 text-center">
-          <Button>Mulai</Button>
+          <Button>
+            <Link to="/quiz">Mulai Quiz</Link>
+          </Button>
           <Button variant="outline">
             <Link to="/learn">Belajar Dulu</Link>
           </Button>

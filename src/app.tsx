@@ -3,6 +3,7 @@ import { useRoutes } from "react-router";
 // pages
 import Home from "@/pages/home";
 import Learn from "@/pages/learn";
+import Quiz from "@/pages/quiz";
 
 export default function App() {
   const element = useRoutes([
@@ -13,6 +14,10 @@ export default function App() {
     {
       path: "/learn",
       element: <Learn />,
+    },
+    {
+      path: "/quiz",
+      element: <Quiz />,
     },
   ]);
 
