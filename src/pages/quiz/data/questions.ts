@@ -36,7 +36,7 @@ export const questions = [
       "Patih Lambung Mangkurat",
       "Putri Junjung Buih",
       "Raja Negara Dipa",
-      "40 perawan",
+      "40 Penjaga",
     ],
     correct_answer: "Patih Lambung Mangkurat",
   },

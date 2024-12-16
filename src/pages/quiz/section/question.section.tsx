@@ -26,15 +26,15 @@ export default function QuestionSection({
   const shuffledOptions = shuffleOptions(options);
 
   return (
-    <section className="max-w-md">
-      <h2 className="mb-4 text-xl font-semibold">{question}</h2>
+    <section className="max-w-md p-5 sm:p-0">
+      <h2 className="mb-4 text-lg font-semibold sm:text-xl">{question}</h2>
       <section className="space-y-4">
         {shuffledOptions.map((option, index) => (
           <Button
             key={index}
             variant="outline"
             onClick={() => onAnswer(option)}
-            className="w-full text-wrap"
+            className="h-auto w-full text-wrap"
           >
             {option}
           </Button>

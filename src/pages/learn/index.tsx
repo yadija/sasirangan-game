@@ -8,10 +8,12 @@ export default function Learn() {
   return (
     <section className="flex size-full flex-col items-center justify-center">
       <section className="flex flex-col items-center justify-center">
-        <h1 className="mb-5 text-7xl font-bold">Mari Belajar</h1>
+        <h1 className="mb-5 text-center text-2xl font-bold sm:text-3xl md:text-5xl lg:text-7xl">
+          Mari Belajar
+        </h1>
       </section>
 
-      <section className="space-x-2">
+      <section className="grid grid-cols-1 gap-2 sm:grid-cols-2">
         <IntroduceSection />
         <HistorySection />
         <MakingSection />

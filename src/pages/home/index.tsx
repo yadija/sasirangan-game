@@ -8,9 +8,11 @@ export default function Home() {
   return (
     <section className="flex size-full grow flex-col items-center justify-between">
       <section className="flex grow flex-col items-center justify-center">
-        <h1 className="mb-5 text-7xl font-bold">Sasirangan Game</h1>
+        <h1 className="mb-5 text-center text-2xl font-bold sm:text-3xl md:text-5xl lg:text-7xl">
+          Sasirangan Game
+        </h1>
 
-        <section className="space-x-2 text-center">
+        <section className="flex flex-col gap-2 sm:flex-row">
           <StartButton />
           <Button variant="outline">
             <Link to="/learn">Belajar Dulu</Link>
@@ -19,7 +21,9 @@ export default function Home() {
       </section>
 
       <footer className="m-5">
-        <p>dibuat oleh Kelompok 3</p>
+        <p className="text-center text-xs sm:text-base">
+          dibuat oleh Kelompok 3
+        </p>
       </footer>
     </section>
   );
