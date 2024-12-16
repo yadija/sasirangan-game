@@ -13,6 +13,7 @@ interface Question {
 export default function Quiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<string[]>([]);
+  const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
 
@@ -24,6 +25,10 @@ export default function Quiz() {
   const handleAnswer = (answer: string) => {
     const updatedAnswers = [...userAnswers, answer];
     setUserAnswers(updatedAnswers);
+
+    if (answer === shuffledQuestions[currentQuestionIndex].correct_answer) {
+      setScore(score + 1);
+    }
 
     if (currentQuestionIndex < shuffledQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -40,6 +45,7 @@ export default function Quiz() {
         <FinalQuizSection
           questions={shuffledQuestions}
           userAnswers={userAnswers}
+          score={score}
         />
       ) : (
         currentQuestion && (

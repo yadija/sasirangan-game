@@ -1,31 +1,71 @@
+import { AlertDialogHeader } from "@/components/ui/alert-dialog";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
+
 interface FinalQuizSectionProps {
   questions: { question: string; correct_answer: string }[];
   userAnswers: string[];
+  score: number;
 }
 
 export default function FinalQuizSection({
   questions,
   userAnswers,
+  score,
 }: FinalQuizSectionProps) {
   return (
     <section>
-      <h2 className="mb-4 text-center text-2xl font-bold">Hasil Quiz</h2>
-      <ul>
-        {questions.map((question, index) => (
-          <li key={index} className="mb-2">
-            <p className="font-semibold">{question.question}</p>
-            <p
-              className={`${
-                userAnswers[index] === question.correct_answer
-                  ? "text-green-500"
-                  : "text-red-500"
-              }`}
-            >
-              Jawaban Anda: {userAnswers[index]}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <h2 className="mb-4 text-xl font-semibold">Hasil Quiz</h2>
+      <p className="mb-4">
+        Skor Anda: {score} / {questions.length}
+      </p>
+
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button variant="outline">Lihat Jawaban</Button>
+        </DialogTrigger>
+
+        <DialogContent className="h-[65vh] sm:max-w-[425px]">
+          <AlertDialogHeader>
+            <DialogTitle>Lihat Jawaban</DialogTitle>
+            <DialogDescription />
+          </AlertDialogHeader>
+
+          <ScrollArea className="h-full pr-2">
+            <ul className="space-y-4">
+              {questions.map((question, index) => (
+                <li key={index}>
+                  <p className="font-semibold">{question.question}</p>
+                  <p
+                    className={`${
+                      userAnswers[index] === question.correct_answer
+                        ? "text-green-700"
+                        : "text-red-600"
+                    }`}
+                  >
+                    Jawaban Anda: {userAnswers[index]}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </ScrollArea>
+
+          <DialogFooter>
+            <DialogClose asChild>
+              <Button>Tutup</Button>
+            </DialogClose>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
