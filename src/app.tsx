@@ -22,7 +22,7 @@ export default function App() {
   ]);
 
   return (
-    <main className="m-auto grid h-screen bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd98YXF0irQENhSBfItW4RYoPSdyxMMX7YXQ&s')]">
+    <main className="m-auto grid h-screen bg-[url('./assets/images/background-white.jpeg')] bg-cover">
       <section className="m-auto h-[90%] w-4/5 rounded bg-white/50 backdrop-blur-lg">
         <nav className="absolute p-2">
           <h1 className="text-sm font-bold sm:text-base">
