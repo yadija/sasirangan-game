@@ -2,6 +2,7 @@ import { useRoutes } from "react-router";
 
 // pages
 import Home from "@/pages/home";
+import Leaderboards from "@/pages/leaderboards";
 import Learn from "@/pages/learn";
 import Quiz from "@/pages/quiz";
 
@@ -18,6 +19,10 @@ export default function App() {
     {
       path: "/quiz",
       element: <Quiz />,
+    },
+    {
+      path: "/leaderboards",
+      element: <Leaderboards />,
     },
   ]);
 

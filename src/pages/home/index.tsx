@@ -16,12 +16,16 @@ export default function Home() {
         <section className="flex flex-col gap-2">
           <StartButton />
 
-          <section className="flex flex-col gap-2 sm:flex-row">
+          <section className="mb-5 flex flex-col gap-2 sm:flex-row">
             <Button variant="outline">
               <Link to="/learn">Belajar Dulu</Link>
             </Button>
-            <AboutSection />
+            <Button variant="outline">
+              <Link to="/leaderboards">Peringkat</Link>
+            </Button>
           </section>
+
+          <AboutSection />
         </section>
       </section>
 
