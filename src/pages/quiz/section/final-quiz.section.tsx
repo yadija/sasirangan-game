@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import { AlertDialogHeader } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,7 +25,7 @@ export default function FinalQuizSection({
   score,
 }: FinalQuizSectionProps) {
   return (
-    <section>
+    <section className="text-center">
       <h2 className="mb-4 text-xl font-semibold">Hasil Quiz</h2>
       <p className="mb-4">
         Skor Anda: {score} / {questions.length}
@@ -31,7 +33,9 @@ export default function FinalQuizSection({
 
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="outline">Lihat Jawaban</Button>
+          <Button variant="outline" className="w-full">
+            Lihat Jawaban
+          </Button>
         </DialogTrigger>
 
         <DialogContent className="h-[65vh] sm:max-w-[425px]">
@@ -66,6 +70,15 @@ export default function FinalQuizSection({
           </DialogFooter>
         </DialogContent>
       </Dialog>
+
+      <section className="mt-4 flex flex-col gap-4 sm:flex-row">
+        <Button variant="outline">
+          <Link to="/">Halaman Utama</Link>
+        </Button>
+        <Button variant="outline">
+          <Link to="/leaderboards">Lihat Peringkat</Link>
+        </Button>
+      </section>
     </section>
   );
 }
