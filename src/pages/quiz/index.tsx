@@ -19,7 +19,7 @@ export default function Quiz() {
 
   useEffect(() => {
     const shuffled = [...questions].sort(() => Math.random() - 0.5);
-    setShuffledQuestions(shuffled.slice(0, 10)); // set 10 questions
+    setShuffledQuestions(shuffled.slice(0, 10));
   }, []);
 
   const handleAnswer = (answer: string) => {
@@ -34,6 +34,20 @@ export default function Quiz() {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       setShowResult(true);
+
+      // Store the user's name, score, and finish time in localStorage
+      const finishTime = new Date().toLocaleString();
+      const leaderboards = JSON.parse(
+        localStorage.getItem("leaderboards") || "[]",
+      );
+
+      leaderboards.push({
+        name: localStorage.getItem("name") || "Pengguna",
+        score: score,
+        finishTime: finishTime,
+      });
+
+      localStorage.setItem("leaderboards", JSON.stringify(leaderboards));
     }
   };
 
