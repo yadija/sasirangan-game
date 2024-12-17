@@ -2,6 +2,7 @@ import { Link } from "react-router";
 
 // components
 import { Button } from "@/components/ui/button";
+import AboutSection from "@/pages/home/section/about.section";
 import StartButton from "@/pages/home/section/start.button";
 
 export default function Home() {
@@ -12,15 +13,19 @@ export default function Home() {
           Sasirangan Game
         </h1>
 
-        <section className="flex flex-col gap-2 sm:flex-row">
+        <section className="flex flex-col gap-2">
           <StartButton />
-          <Button variant="outline">
-            <Link to="/learn">Belajar Dulu</Link>
-          </Button>
+
+          <section className="flex flex-col gap-2 sm:flex-row">
+            <Button variant="outline">
+              <Link to="/learn">Belajar Dulu</Link>
+            </Button>
+            <AboutSection />
+          </section>
         </section>
       </section>
 
-      <footer className="m-5">
+      <footer className="m-5 text-center">
         <p className="text-center text-xs sm:text-base">
           dibuat oleh Kelompok 3
         </p>
