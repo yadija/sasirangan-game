@@ -1,4 +1,7 @@
 // components
+import { Link } from "react-router";
+
+import { Button } from "@/components/ui/button";
 import HistorySection from "@/pages/learn/section/history.section";
 import IntroduceSection from "@/pages/learn/section/introduce.section";
 import MakingSection from "@/pages/learn/section/making.section";
@@ -11,6 +14,12 @@ export default function Learn() {
         <h1 className="mb-5 text-center text-2xl font-bold sm:text-3xl md:text-5xl lg:text-7xl">
           Mari Belajar
         </h1>
+      </section>
+
+      <section className="w-full max-w-md">
+        <Button variant="link">
+          <Link to="/">Kembali</Link>
+        </Button>
       </section>
 
       <section className="grid grid-cols-1 gap-2 sm:grid-cols-2">
