@@ -15,7 +15,9 @@ export default function AboutSection() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Tentang Kami</Button>
+        <Button variant="ghost" className="border border-black">
+          Tentang Kami
+        </Button>
       </DialogTrigger>
       <DialogContent className="h-auto sm:max-w-[425px]">
         <DialogHeader>
