@@ -27,7 +27,7 @@ export default function Quiz() {
     setUserAnswers(updatedAnswers);
 
     if (answer === shuffledQuestions[currentQuestionIndex].correct_answer) {
-      setScore(score + 1);
+      setScore((prevScore) => prevScore + 1);
     }
 
     if (currentQuestionIndex < shuffledQuestions.length - 1) {
@@ -43,7 +43,11 @@ export default function Quiz() {
 
       leaderboards.push({
         name: localStorage.getItem("name") || "Pengguna",
-        score: score,
+        score:
+          score +
+          (answer === shuffledQuestions[currentQuestionIndex].correct_answer
+            ? 1
+            : 0),
         finishTime: finishTime,
       });
 
