@@ -25,36 +25,36 @@ export default function AboutSection() {
       <DialogContent className="h-auto sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Tentang Kami</DialogTitle>
-          <DialogDescription>
+          <DialogDescription className="text-left">
             Kelompok 3 adalah kelompok mahasiswa dari Universitas Islam
             Kalimantan Muhammad Arsyad Al Banjari Banjarmasin yang beranggotakan
-            4 orang
+            4 orang.
           </DialogDescription>
-
-          <section>
-            <p className="font-semibold">Kelompok 3 terdiri dari:</p>
-            <ul>
-              <li>
-                <p>Achmad Yuliadi - 2210010098</p>
-              </li>
-              <li>
-                <p>Baihaqi Fawwaz - 2210010335</p>
-              </li>
-              <li>
-                <p>Khairun Nisa - 2210010297</p>
-              </li>
-              <li>
-                <p>Muhammad Akbar Rizani - 2210010659</p>
-              </li>
-            </ul>
-          </section>
-
-          <DialogFooter>
-            <DialogClose asChild>
-              <Button>Tutup</Button>
-            </DialogClose>
-          </DialogFooter>
         </DialogHeader>
+
+        <section>
+          <p className="font-semibold">Kelompok 3 terdiri dari:</p>
+          <ul>
+            <li>
+              <p>Achmad Yuliadi - 2210010098</p>
+            </li>
+            <li>
+              <p>Baihaqi Fawwaz - 2210010335</p>
+            </li>
+            <li>
+              <p>Khairun Nisa - 2210010297</p>
+            </li>
+            <li>
+              <p>Muhammad Akbar Rizani - 2210010659</p>
+            </li>
+          </ul>
+        </section>
+
+        <DialogFooter>
+          <DialogClose asChild>
+            <Button>Tutup</Button>
+          </DialogClose>
+        </DialogFooter>
       </DialogContent>
     </Dialog>
   );
