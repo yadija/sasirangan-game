@@ -34,7 +34,7 @@ export default function Leaderboards() {
 
       <Card className="w-full max-w-xl border-black bg-transparent p-5">
         <section className="space-x-4">
-          <Button variant="outline">
+          <Button variant="outline" asChild>
             <Link to="/">Kembali</Link>
           </Button>
           <Button variant="destructive" onClick={handleReset}>

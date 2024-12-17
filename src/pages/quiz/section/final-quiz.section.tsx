@@ -72,10 +72,10 @@ export default function FinalQuizSection({
       </Dialog>
 
       <section className="mt-4 flex flex-col gap-4 sm:flex-row">
-        <Button variant="outline">
+        <Button variant="outline" asChild>
           <Link to="/">Halaman Utama</Link>
         </Button>
-        <Button variant="outline">
+        <Button variant="outline" asChild>
           <Link to="/leaderboards">Lihat Peringkat</Link>
         </Button>
       </section>

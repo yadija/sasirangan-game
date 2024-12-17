@@ -17,10 +17,10 @@ export default function Home() {
           <StartButton />
 
           <section className="mb-5 flex flex-col gap-2 sm:flex-row">
-            <Button variant="outline">
+            <Button variant="outline" asChild>
               <Link to="/learn">Belajar Dulu</Link>
             </Button>
-            <Button variant="outline">
+            <Button variant="outline" asChild>
               <Link to="/leaderboards">Peringkat</Link>
             </Button>
           </section>
