@@ -1,3 +1,5 @@
+import { HeartHandshake } from "lucide-react";
+
 // components
 import { Button } from "@/components/ui/button";
 import {
@@ -16,6 +18,7 @@ export default function AboutSection() {
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="ghost" className="border border-black">
+          <HeartHandshake />
           Tentang Kami
         </Button>
       </DialogTrigger>

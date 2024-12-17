@@ -1,3 +1,4 @@
+import { BookOpen, ChartNoAxesColumn } from "lucide-react";
 import { Link } from "react-router";
 
 // components
@@ -18,10 +19,14 @@ export default function Home() {
 
           <section className="mb-5 flex flex-col gap-2 sm:flex-row">
             <Button variant="outline" asChild>
-              <Link to="/learn">Belajar Dulu</Link>
+              <Link to="/learn">
+                <BookOpen /> Belajar Dulu
+              </Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link to="/leaderboards">Peringkat</Link>
+              <Link to="/leaderboards">
+                <ChartNoAxesColumn /> Peringkat
+              </Link>
             </Button>
           </section>
 

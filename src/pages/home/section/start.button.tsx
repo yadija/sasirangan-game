@@ -1,3 +1,4 @@
+import { Play } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
@@ -40,7 +41,10 @@ export default function StartButton() {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button>Mulai Quiz</Button>
+          <Button>
+            <Play />
+            Mulai Quiz
+          </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
@@ -72,7 +76,10 @@ export default function StartButton() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button>Mulai Quiz</Button>
+        <Button>
+          <Play />
+          Mulai Quiz
+        </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>

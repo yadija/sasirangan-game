@@ -1,5 +1,6 @@
+import { Eraser, MoveLeft } from "lucide-react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -34,10 +35,11 @@ export default function Leaderboards() {
 
       <Card className="w-full max-w-xl border-black bg-transparent p-5">
         <section className="space-x-4">
-          <Button variant="outline" asChild>
-            <Link to="/">Kembali</Link>
+          <Button variant="outline" onClick={() => navigate(-1)}>
+            <MoveLeft /> Kembali
           </Button>
           <Button variant="destructive" onClick={handleReset}>
+            <Eraser />
             Reset
           </Button>
         </section>

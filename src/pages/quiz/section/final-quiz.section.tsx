@@ -1,4 +1,5 @@
-import { Link } from "react-router";
+import { ChartNoAxesColumn, House, ListChecks } from "lucide-react";
+import { useNavigate } from "react-router";
 
 import { AlertDialogHeader } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
@@ -24,6 +25,8 @@ export default function FinalQuizSection({
   userAnswers,
   score,
 }: FinalQuizSectionProps) {
+  const navigate = useNavigate();
+
   return (
     <section className="text-center">
       <h2 className="mb-4 text-xl font-semibold">Hasil Quiz</h2>
@@ -34,6 +37,7 @@ export default function FinalQuizSection({
       <Dialog>
         <DialogTrigger asChild>
           <Button variant="outline" className="w-full">
+            <ListChecks />
             Lihat Jawaban
           </Button>
         </DialogTrigger>
@@ -72,11 +76,11 @@ export default function FinalQuizSection({
       </Dialog>
 
       <section className="mt-4 flex flex-col gap-4 sm:flex-row">
-        <Button variant="outline" asChild>
-          <Link to="/">Halaman Utama</Link>
+        <Button variant="outline" onClick={() => navigate("/")}>
+          <House /> Halaman Utama
         </Button>
-        <Button variant="outline" asChild>
-          <Link to="/leaderboards">Lihat Peringkat</Link>
+        <Button variant="outline" onClick={() => navigate("/leaderboards")}>
+          <ChartNoAxesColumn /> Lihat Peringkat
         </Button>
       </section>
     </section>
