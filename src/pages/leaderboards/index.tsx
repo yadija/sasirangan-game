@@ -57,19 +57,27 @@ export default function Leaderboards() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {leaderboards.map((leaderboard, index) => (
-              <TableRow key={index}>
-                <TableCell className="font-medium">
-                  {leaderboard.name}
-                </TableCell>
-                <TableCell className="text-center">
-                  {leaderboard.score}
-                </TableCell>
-                <TableCell className="text-right">
-                  {leaderboard.finishTime}
+            {leaderboards.length === 0 && (
+              <TableRow>
+                <TableCell colSpan={3} className="text-center">
+                  Kosong
                 </TableCell>
               </TableRow>
-            ))}
+            )}
+            {leaderboards &&
+              leaderboards.map((leaderboard, index) => (
+                <TableRow key={index}>
+                  <TableCell className="font-medium">
+                    {leaderboard.name}
+                  </TableCell>
+                  <TableCell className="text-center">
+                    {leaderboard.score}
+                  </TableCell>
+                  <TableCell className="text-right">
+                    {leaderboard.finishTime}
+                  </TableCell>
+                </TableRow>
+              ))}
           </TableBody>
         </Table>
       </Card>
