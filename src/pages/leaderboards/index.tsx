@@ -12,12 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
-interface Leaderboard {
-  name: string;
-  score: number;
-  finishTime: string;
-}
+import { Leaderboard } from "@/types/leaderboards.type";
 
 export default function Leaderboards() {
   const navigate = useNavigate();

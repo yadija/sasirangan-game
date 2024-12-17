@@ -3,12 +3,7 @@ import { useEffect, useState } from "react";
 import { questions } from "@/pages/quiz/data/questions";
 import FinalQuizSection from "@/pages/quiz/section/final-quiz.section";
 import QuestionSection from "@/pages/quiz/section/question.section";
-
-interface Question {
-  question: string;
-  options: string[];
-  correct_answer: string;
-}
+import { Question } from "@/types/question.type";
 
 export default function Quiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
