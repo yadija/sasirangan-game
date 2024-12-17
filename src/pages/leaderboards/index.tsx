@@ -35,7 +35,7 @@ export default function Leaderboards() {
 
       <Card className="w-full max-w-xl border-black bg-transparent p-5">
         <section className="space-x-4">
-          <Button variant="outline" onClick={() => navigate(-1)}>
+          <Button variant="outline" onClick={() => navigate("/")}>
             <MoveLeft /> Kembali
           </Button>
           <Button variant="destructive" onClick={handleReset}>
@@ -62,19 +62,21 @@ export default function Leaderboards() {
               </TableRow>
             )}
             {leaderboards &&
-              leaderboards.map((leaderboard, index) => (
-                <TableRow key={index}>
-                  <TableCell className="font-medium">
-                    {leaderboard.name}
-                  </TableCell>
-                  <TableCell className="text-center">
-                    {leaderboard.score}
-                  </TableCell>
-                  <TableCell className="text-right">
-                    {leaderboard.finishTime}
-                  </TableCell>
-                </TableRow>
-              ))}
+              leaderboards
+                .sort((a, b) => b.score - a.score)
+                .map((leaderboard, index) => (
+                  <TableRow key={index}>
+                    <TableCell className="font-medium">
+                      {leaderboard.name}
+                    </TableCell>
+                    <TableCell className="text-center">
+                      {leaderboard.score}
+                    </TableCell>
+                    <TableCell className="text-right">
+                      {leaderboard.finishTime}
+                    </TableCell>
+                  </TableRow>
+                ))}
           </TableBody>
         </Table>
       </Card>
