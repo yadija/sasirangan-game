@@ -1,6 +1,7 @@
 import { useRoutes } from "react-router";
 
 // components
+import AudioPlayer from "@/components/common/audio-player";
 import Navbar from "@/components/common/navbar";
 // pages
 import Home from "@/pages/home";
@@ -34,6 +35,8 @@ export default function App() {
         <Navbar />
 
         {element}
+
+        <AudioPlayer />
       </section>
     </main>
   );
