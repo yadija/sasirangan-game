@@ -1,5 +1,7 @@
 import { useRoutes } from "react-router";
 
+// components
+import Navbar from "@/components/common/navbar";
 // pages
 import Home from "@/pages/home";
 import Leaderboards from "@/pages/leaderboards";
@@ -29,13 +31,7 @@ export default function App() {
   return (
     <main className="m-auto grid h-screen bg-[url('./assets/images/background-white.jpeg')] bg-cover">
       <section className="m-auto h-[90%] w-4/5 rounded bg-white/50 backdrop-blur-lg">
-        <nav className="absolute p-2">
-          <h1 className="text-sm font-bold sm:text-base">
-            {localStorage.getItem("name")
-              ? `Halo, ${localStorage.getItem("name")}`
-              : "Selamat Datang"}
-          </h1>
-        </nav>
+        <Navbar />
 
         {element}
       </section>
