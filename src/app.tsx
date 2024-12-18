@@ -30,8 +30,8 @@ export default function App() {
   ]);
 
   return (
-    <main className="m-auto grid h-screen bg-[url('./assets/images/background-white.jpeg')] bg-cover">
-      <section className="m-auto h-[90%] w-4/5 rounded bg-white/50 backdrop-blur-lg">
+    <main className="m-auto grid h-screen bg-[url('./assets/images/background-white.jpeg')] bg-cover dark:bg-[url('./assets/images/background-black.jpeg')]">
+      <section className="m-auto h-[90%] w-4/5 rounded bg-white/30 backdrop-blur-sm dark:bg-black/10 dark:backdrop-blur-sm">
         <Navbar />
 
         {element}

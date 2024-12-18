@@ -17,7 +17,10 @@ export default function AboutSection() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="ghost" className="border border-black">
+        <Button
+          variant="ghost"
+          className="border border-black dark:border-white"
+        >
           <HeartHandshake />
           Tentang Kami
         </Button>
