@@ -66,6 +66,7 @@ export default function Quiz() {
             question={currentQuestion.question}
             options={currentQuestion.options}
             onAnswer={handleAnswer}
+            image={currentQuestion.image}
           />
         )
       )}

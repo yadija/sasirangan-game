@@ -1,4 +1,6 @@
-export const questions = [
+import { Question } from "@/types/question.type";
+
+export const questions: Question[] = [
   // introduction
   {
     question:
@@ -133,5 +135,69 @@ export const questions = [
       "Menggunakan mesin modern untuk menjahit",
     ],
     correct_answer: "Menggunakan mesin modern untuk menjahit",
+  },
+
+  // pattern
+  {
+    question: "Apa nama dari motif sasirangan ini?",
+    options: [
+      "Bintang Bahambur",
+      "Kembang Tampuk Manggis",
+      "Bayam Raja",
+      "Kembang Sasaki",
+    ],
+    correct_answer: "Bayam Raja",
+    image: "bayam-raja",
+  },
+  {
+    question: "Apa nama dari motif sasirangan ini?",
+    options: [
+      "Bintang Bahambur",
+      "Kulat Kurikit",
+      "Kembang Tampuk Manggis",
+      "Naga Balimbur",
+    ],
+    correct_answer: "Bintang Bahambur",
+    image: "bintang-bahambur",
+  },
+  {
+    question: "Apa nama dari motif sasirangan ini?",
+    options: ["Bintang Bahambur", "Gagatas", "Turun Dayang", "Gigi Haruan"],
+    correct_answer: "Gagatas",
+    image: "gagatas",
+  },
+  {
+    question: "Apa nama dari motif sasirangan ini?",
+    options: ["Iris Pundak", "Kembang Sasaki", "Turun Dayang", "Gigi Haruan"],
+    correct_answer: "Gigi Haruan",
+    image: "gigi-haruan",
+  },
+  {
+    question: "Apa nama dari motif sasirangan ini?",
+    options: ["Iris Pundak", "Kembang Sasaki", "Turun Dayang", "Gagatas"],
+    correct_answer: "Iris Pundak",
+    image: "iris-pundak",
+  },
+  {
+    question: "Apa nama dari motif sasirangan ini?",
+    options: [
+      "Iris Pundak",
+      "Kembang Kacang",
+      "Turun Dayang",
+      "Kembang Sasaki",
+    ],
+    correct_answer: "Kembang Sasaki",
+    image: "kambang-sasaki",
+  },
+  {
+    question: "Apa nama dari motif sasirangan ini?",
+    options: [
+      "Kembang Tampuk Manggis",
+      "Kembang Sasaki",
+      "Ombak Sinapur Karang",
+      "Kembang Kacang",
+    ],
+    correct_answer: "Kembang Kacang",
+    image: "kembang-kacang",
   },
 ];
